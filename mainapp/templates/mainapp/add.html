@@ -1,0 +1,17 @@
+{% extends 'mainapp/base.html' %}
+{% block title %} Add Items{% endblock %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/add.css' %}" >
+{% endblock %}
+{% block body %}
+
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" value="ADD">ADD</button>
+</form>
+
+<button onclick="location.href='/display/'">back</button>
+
+{% endblock %}

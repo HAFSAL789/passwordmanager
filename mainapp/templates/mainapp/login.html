@@ -1,0 +1,20 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% block title %} login{% endblock %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}" >
+{% endblock %}
+{% block body %}
+<div class="container">
+  <div class="brand-logo"></div>
+  <div class="title-name">PASSWORD MANAGER</div>
+  <div class="inputs">
+  <form method="post">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit"  value="Login">Login</button>
+  </form>
+  <button type="button" onClick="location.href='usercreation/'" value="Create Account" >create</button>
+</div>
+  </div>
+{% endblock %}

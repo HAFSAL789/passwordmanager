@@ -1,0 +1,33 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% block title %} Display {% endblock %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/display.css' %}" >
+{% endblock %}
+{% block body %}
+
+<div class="container">
+    <h3>{{ request.user }}'s</h3>
+    <div class="title-name">SAVED PASSWORDS</div>
+    <button id='logout' onClick="location.href='/logout/'">LOGOUT</button>
+
+
+<button id="button2" onClick="location.href='/additem/'">ADD NEW</button>
+
+    <form method="post">
+        {% csrf_token %}
+        {% for form in formset %}
+            <p>
+                <div class="inputs">
+                {{form.Title}}
+                {{form.password}}
+                {{form.delete_item}}
+        </div>
+            </p>
+        {% endfor %}
+        <button name="b" type="submit" value="{{form.pk}}">Delete Button</button>
+    </form>
+
+{% endblock %}
+</div>
+
