@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="shortcut icon" href="#" />
+
     {% load static %}
 
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" >
     {% block head %}{% endblock %}
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="#" />
 </head>
 <body>
 {% block body %}{% endblock %}
