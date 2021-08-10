@@ -30,6 +30,4 @@ class Display_Item_Form(ModelForm):
         model = AddItem
         fields = ['Title', 'password',]
 
-
-
 Display_formset = formset_factory(Display_Item_Form, extra=0)
