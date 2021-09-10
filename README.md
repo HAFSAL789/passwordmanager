@@ -1,7 +1,7 @@
 # passwordmanager
  A simple passwordmanager app written in django.
 
-# Important
+# warning
  This project is made for practice purpose,so it doesnt contain any security
 
 # Backend
